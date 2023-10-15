@@ -20,6 +20,7 @@ short_button.addEventListener("click", () => {
     new_link.textContent = result.short_url;
     new_link.href = result.short_url;
     dropdowned.style.opacity = 1;
+    dropdowned.style.trans;
     return;
   };
   fetch("https://api.apilayer.com/short_url/hash", requestOptions)
