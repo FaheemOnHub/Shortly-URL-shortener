@@ -9,6 +9,8 @@
   --Very-Dark-Violet: hsl(260, 8%, 14%);
 }
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -41,6 +43,7 @@ body {
 }
 .upper-front {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .upper-front-left {
@@ -63,4 +66,38 @@ body {
   right: -6rem;
 }
 .lower-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Grayish-Violet);
+}
+#urlForm {
+  width: 80%;
+  padding: 4rem;
+  border-radius: 1rem;
+  background-image: url("./images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--Dark-Violet);
+}
+#urlInput {
+  width: 80%;
+}
+.drop-down {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: white;
+  margin-top: 1rem;
+  opacity: 1;
+}
+.boxes {
+  display: flex;
+  text-align: center;
+  width: 60rem;
+  gap: 5rem;
 }
