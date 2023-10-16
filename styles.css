@@ -29,6 +29,9 @@ body {
   padding-left: 4rem;
   padding-right: 4rem;
 }
+.navbar-link {
+  color: var(--Grayish-Violet);
+}
 .nav-buttons-1 {
   background: none;
   border: none;
@@ -108,7 +111,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--Grayish-Violet);
+  background-color: whitesmoke;
   padding: 6rem;
 }
 #urlForm {
@@ -158,6 +161,37 @@ body {
   margin-top: 1rem;
   opacity: 0;
   transition: transform 0.3s ease;
+  gap: 2rem;
+  font-size: 16px;
+  margin-bottom: 5rem;
+  border: 3px solid black;
+  align-items: center;
+}
+.drop-down button {
+  background: var(--Cyan);
+  border: none;
+  font-size: 16px;
+  border-radius: 2rem;
+  font-weight: 700;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.drop-down button:hover {
+  background-color: #ff5733;
+}
+.drop-down-given,
+.drop-down-new {
+  font-size: 14px;
+  color: var(--Grayish-Violet);
+}
+.drop-down-new {
+  color: var(--Cyan);
+  text-decoration: none;
+}
+.drop-down-new:hover {
+  text-decoration: underline;
 }
 .boxes {
   display: flex;
@@ -198,4 +232,31 @@ body {
   list-style: none;
   gap: 2rem;
   line-height: 2rem;
+}
+.lower-lower-front button {
+  background: var(--Cyan);
+  border: none;
+  font-size: 16px;
+  border-radius: 2rem;
+  font-weight: 700;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.lower-lower-front button:hover {
+  background-color: #ff5733;
+}
+.inner-box {
+  border-radius: 1rem;
+}
+.error-message {
+  z-index: 1;
+  color: red;
+}
+.inner-box h2 {
+  font-size: 18px;
+}
+.inner-box p {
+  color: var(--Grayish-Violet);
 }

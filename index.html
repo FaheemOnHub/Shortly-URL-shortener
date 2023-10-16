@@ -16,7 +16,7 @@
   <body>
     <div class="navbar">
       <div class="links">
-        <img src="./images/logo.svg" alt="" />
+        <img src="./images/logo.svg" alt="" style="height: fit-content" />
         <li>
           <a
             href="index.html"
@@ -28,7 +28,8 @@
         </li>
         <li>
           <a
-            href="index.html"
+            href="https://github.com/FaheemOnHub/Shortly-URL-shortener"
+            target="_blank"
             class="navbar-link"
             style="text-decoration: none"
           >
@@ -37,8 +38,9 @@
         </li>
         <li>
           <a
-            href="index.html"
+            href="https://github.com/FaheemOnHub/Shortly-URL-shortener"
             class="navbar-link"
+            target="_blank"
             style="text-decoration: none"
           >
             Resources
@@ -65,10 +67,13 @@
       </div>
     </div>
     <div class="lower-front">
+      <div id="error-message" class="error-message"></div>
+
       <form id="urlForm">
         <input type="text" id="urlInput" placeholder="Shorten a link here..." />
         <button type="button" id="shortenButton">Shorten it</button>
       </form>
+
       <div class="drop-down">
         <p class="drop-down-given">Here!</p>
         <a
@@ -76,18 +81,18 @@
           class="drop-down-new"
           >https://faheemonhub.github.io/Nexcent-Figma/</a
         >
-        <button>Copy!</button>
+        <button id="copy">Copy!</button>
       </div>
       <div style="text-align: center">
         <h2>Advanced Statistics</h2>
-        <p>
+        <p style="color: var(--Grayish-Violet)">
           Track down your links are performing<br /><span
             >With our advanced tools</span
           >
         </p>
       </div>
       <div class="boxes">
-        <div style="background-color: white">
+        <div style="background-color: white" class="inner-box">
           <img
             src="./images/icon-brand-recognition.svg"
             alt=""
@@ -99,7 +104,10 @@
             temporibus distinctio dolore. Repellendus, itaque sunt!
           </p>
         </div>
-        <div style="background-color: white; margin-top: 1.5rem">
+        <div
+          style="background-color: white; margin-top: 1.8rem"
+          class="inner-box"
+        >
           <img
             src="./images/icon-detailed-records.svg"
             alt=""
@@ -111,7 +119,10 @@
             Consectetur perspiciatis dicta, rem commodi voluptates facere.
           </p>
         </div>
-        <div style="background-color: white; margin-top: 3rem">
+        <div
+          style="background-color: white; margin-top: 3.5rem"
+          class="inner-box"
+        >
           <img
             src="./images/icon-fully-customizable.svg"
             alt=""
