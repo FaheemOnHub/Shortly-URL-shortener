@@ -29,6 +29,30 @@ body {
   padding-left: 4rem;
   padding-right: 4rem;
 }
+.nav-buttons-1 {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--Grayish-Violet);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.nav-buttons-2 {
+  background: var(--Cyan);
+  border: none;
+  font-size: 16px;
+  border-radius: 2rem;
+  font-weight: 700;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-buttons-2:hover {
+  background-color: #ff5733;
+}
 .links {
   display: flex;
   flex-direction: row;
@@ -57,6 +81,20 @@ body {
 }
 .upper-front-left p {
 }
+.upper-front-left-button {
+  background: var(--Cyan);
+  border: none;
+  font-size: 16px;
+  border-radius: 2rem;
+  color: white;
+  padding: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.upper-front-left-button:hover {
+  background-color: #ff5733;
+}
 .upper-front-right {
   overflow: hidden;
 }
@@ -74,16 +112,40 @@ body {
   padding: 6rem;
 }
 #urlForm {
-  width: 80%;
-  padding: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 90%;
+  padding: 3rem;
   border-radius: 1rem;
   background-image: url("./images/bg-shorten-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--Dark-Violet);
+  position: relative;
+  top: -8rem;
 }
 #urlInput {
-  width: 80%;
+  width: 90%;
+  padding: 1rem;
+  font-size: 20px;
+  border-radius: 1rem;
+  border: none;
+}
+#shortenButton {
+  width: 20%;
+  font-weight: 700;
+  background: var(--Cyan);
+  border: none;
+  font-size: 16px;
+  border-radius: 2rem;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+#shortenButton:hover {
+  background-color: #ff5733;
 }
 .drop-down {
   display: flex;
@@ -122,4 +184,18 @@ body {
   font-weight: 700;
   font-size: 22px;
   color: white;
+}
+.footer {
+  display: flex;
+  background-color: var(--Very-Dark-Violet);
+  color: white;
+  justify-content: space-between;
+  padding: 2rem;
+  /* align-items: center; */
+}
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  line-height: 2rem;
 }
