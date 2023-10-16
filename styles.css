@@ -71,6 +71,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--Grayish-Violet);
+  padding: 6rem;
 }
 #urlForm {
   width: 80%;
@@ -101,4 +102,24 @@ body {
   text-align: center;
   width: 60rem;
   gap: 5rem;
+}
+.img-box {
+  position: relative;
+  left: -4rem;
+  top: -1.5rem;
+  background-color: var(--Very-Dark-Violet);
+  padding: 1rem;
+  border-radius: 50%;
+}
+.lower-lower-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(./images/bg-boost-desktop.svg);
+  background-color: var(--Dark-Violet);
+  padding: 4rem;
+  font-weight: 700;
+  font-size: 22px;
+  color: white;
 }
