@@ -3,7 +3,7 @@ const short_button = document.getElementById("shortenButton");
 const old_link = document.querySelector(".drop-down-given");
 const new_link = document.querySelector(".drop-down-new");
 const dropdowned = document.querySelector(".drop-down");
-const errorMessage = document.getElementById("error-message"); // Error message element
+const errorMessage = document.getElementById("error-message");
 const copybutton = document.getElementById("copy");
 const text_to_copy = new_link.textContent;
 var myHeaders = new Headers();
@@ -15,10 +15,10 @@ short_button.addEventListener("click", () => {
   if (inputUrl.trim() === "") {
     // Check if the input is empty
     errorMessage.textContent = "URL is required"; // Display error message
+
     return;
   }
 
-  // Regular expression to validate URLs
   const urlPattern = /^(https?:\/\/)?(www\.)?[\w\.-]+\.\w+(\/.*)?$/i;
 
   if (!urlPattern.test(inputUrl)) {
@@ -26,8 +26,6 @@ short_button.addEventListener("click", () => {
     errorMessage.textContent = "Invalid URL"; // Display error message
     return;
   }
-
-  // Clear error message if input is valid
   errorMessage.textContent = "";
   var raw = `${text_box.value}`;
 
@@ -42,6 +40,7 @@ short_button.addEventListener("click", () => {
     new_link.textContent = result.short_url;
     new_link.href = result.short_url;
     dropdowned.style.opacity = 1;
+    // dropdowned.style.transform = translateY(0);
     copybutton.addEventListener("click", () => {
       const textToCopy = new_link.textContent;
       const textArea = document.createElement("textarea");

@@ -24,6 +24,7 @@ body {
 }
 .navbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding-top: 3rem;
   padding-left: 4rem;
@@ -70,7 +71,7 @@ body {
 }
 .upper-front {
   display: flex;
-  flex-wrap: wrap;
+
   justify-content: space-between;
 }
 .upper-front-left {
@@ -78,6 +79,7 @@ body {
   margin: auto;
   padding-top: 4rem;
   padding-left: 4rem;
+  padding-bottom: 4rem;
 }
 .upper-front-left h1 {
   font-size: 4rem;
@@ -100,11 +102,15 @@ body {
 }
 .upper-front-right {
   overflow: hidden;
+  max-width: 100%;
+  height: auto;
 }
 .upper-front-right img {
   padding-top: 4rem;
   position: relative;
   right: -6rem;
+  max-width: 100%;
+  height: auto;
 }
 .lower-front {
   display: flex;
@@ -153,51 +159,54 @@ body {
 .drop-down {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  gap: 2rem;
+  width: 90%;
+  font-size: 16px;
   justify-content: space-between;
-  padding: 0.5rem;
+  align-items: center;
+  padding: 0.4rem;
   border-radius: 1rem;
   background-color: white;
-  margin-top: 1rem;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  /* top: -4rem; */
   opacity: 0;
-  transition: transform 0.3s ease;
-  gap: 2rem;
-  font-size: 16px;
-  margin-bottom: 5rem;
-  border: 3px solid black;
-  align-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(-20px);
 }
-.drop-down button {
+.drop-down-button {
+  width: 20%;
+  font-weight: 700;
   background: var(--Cyan);
   border: none;
   font-size: 16px;
   border-radius: 2rem;
-  font-weight: 700;
   color: white;
   padding: 1rem;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-.drop-down button:hover {
+.drop-down-button:hover {
   background-color: #ff5733;
 }
 .drop-down-given,
 .drop-down-new {
-  font-size: 14px;
+  font-size: 14px; /* Adjust the font size */
   color: var(--Grayish-Violet);
 }
 .drop-down-new {
   color: var(--Cyan);
-  text-decoration: none;
+  text-decoration: none; /* Remove underlines */
 }
 .drop-down-new:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Add underline on hover */
 }
+
 .boxes {
   display: flex;
   text-align: center;
   width: 60rem;
-  gap: 5rem;
+  gap: 3rem;
 }
 .img-box {
   position: relative;
@@ -233,6 +242,19 @@ body {
   gap: 2rem;
   line-height: 2rem;
 }
+.each-box {
+  border-radius: 1rem;
+  line-height: 2rem;
+}
+.each-box h2 {
+  font-size: 16px;
+}
+.each-box p {
+  color: var(--Gray);
+}
+.info-box p {
+  color: var(--Grayish-Violet);
+}
 .lower-lower-front button {
   background: var(--Cyan);
   border: none;
@@ -247,16 +269,72 @@ body {
 .lower-lower-front button:hover {
   background-color: #ff5733;
 }
-.inner-box {
-  border-radius: 1rem;
-}
 .error-message {
   z-index: 1;
-  color: red;
 }
-.inner-box h2 {
-  font-size: 18px;
-}
-.inner-box p {
-  color: var(--Grayish-Violet);
+@media (max-width: 1000px) {
+  .upper-front {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .upper-front-left {
+    /* border: 1px solid blue; */
+    margin: auto;
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+  .lower-front {
+  }
+  .boxes {
+    flex-wrap: wrap;
+    max-width: 10rem;
+    gap: 1.5rem;
+    position: relative;
+    top: 2rem;
+  }
+  #urlForm {
+    flex-wrap: wrap;
+    justify-content: center;
+    top: -3rem;
+    min-width: 10rem;
+  }
+  #urlInput {
+    width: 10rem;
+    font-size: 16px;
+  }
+  #shortenButton {
+    font-weight: 700;
+    font-size: 14px;
+    width: 6rem;
+  }
+  .drop-down {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+  }
+  .drop-down-button {
+    width: 6rem;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .upper-front-right img {
+    display: flex;
+    position: relative;
+    right: 0;
+  }
 }
